@@ -305,16 +305,16 @@ function BannerGroup(props) {
                   <RandomGalgameButton color="primary" variant="solid">
                     随机一部游戏
                   </RandomGalgameButton>
-                  <Button
+                  {/* <Button
                     isIconOnly
                     isExternal
                     as={Link}
                     variant="flat"
                     color="secondary"
                   >
-                    {/* <Discord /> */}
+                    <Discord />
                     <Send />
-                  </Button>
+                  </Button> */}
                 </div>
               </CardBody>
             </Card>

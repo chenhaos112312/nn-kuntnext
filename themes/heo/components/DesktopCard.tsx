@@ -26,14 +26,14 @@ export const KunDesktopCard = ({ posts, currentSlide }: Props) => {
       <Card className="absolute border-none bottom-4 left-4 right-4 bg-background/80 backdrop-blur-md">
         <div className="p-4">
           <div className="flex items-center gap-3 mb-2">
-            <img
+            {/* <img
               src={post.authorAvatar}
               alt={post.authorName}
               className="w-6 h-6 rounded-full"
             />
             <span className="text-sm text-foreground/80">
               {post.authorName}
-            </span>
+            </span> */}
           </div>
           <Link
             color="foreground"
