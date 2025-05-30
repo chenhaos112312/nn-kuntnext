@@ -24,17 +24,18 @@ export const RandomGalgameButton = (props: KunButtonProps) => {
   //   return response.uniqueId
   // }
 
-  // const handleRandomJump = async () => {
-  //   const uniqueId = await fetchRandomUniqueId()
-  //   if (uniqueId) {
-  //     router.push(`/${uniqueId}`)
-  //   }
-  // }
+  const handleRandomJump = async () => {
+    // const uniqueId = await fetchRandomUniqueId()
+    // if (uniqueId) {
+    //   router.push(`/${uniqueId}`)
+    // }
+    router.push(`/about`)
+  }
 
   return (
     <Button
       {...props}
-      // onPress={handleRandomJump}
+      onPress={handleRandomJump}
       startContent={props.isIconOnly ? '' : <Dices size={18} />}
     >
       {props.isIconOnly ? (

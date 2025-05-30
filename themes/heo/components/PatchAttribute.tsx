@@ -1,0 +1,45 @@
+'use client'
+
+import { Chip } from '@nextui-org/chip'
+// import {
+//   SUPPORTED_LANGUAGE_MAP,
+//   SUPPORTED_PLATFORM_MAP,
+//   SUPPORTED_TYPE_MAP
+// } from '~/constants/resource'
+
+interface Props {
+  types: any[]
+  languages?: string[]
+  platforms?: string[]
+  size?: 'lg' | 'md' | 'sm'
+}
+
+export const KunPatchAttribute = ({
+  types,
+  languages = [],
+  platforms = [],
+  size = 'md'
+}: Props) => {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {types.map((type) => (
+        <Chip key={type.name} variant="flat" color="primary" size={size}>
+          {/* {SUPPORTED_TYPE_MAP[type]} */}
+          {type.name}
+        </Chip>
+      ))}
+         
+      {/* {languages?.map((lang) => (
+        <Chip key={lang} variant="flat" color="secondary" size={size}>
+          {SUPPORTED_LANGUAGE_MAP[lang]}
+        </Chip>
+      ))}
+      {platforms?.map((platform) => (
+        <Chip key={platform} variant="flat" color="success" size={size}>
+          {SUPPORTED_PLATFORM_MAP[platform]}
+        </Chip>
+      ))} */}
+    </div>
+  )
+}
+export default KunPatchAttribute

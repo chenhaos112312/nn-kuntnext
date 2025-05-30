@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { KunDesktopCard } from './DesktopCard'
-// import { KunMobileCard } from './MobileCard'
+import { KunMobileCard } from './MobileCard'
 import { RandomGalgameButton } from './RandomGalgameButton'
 import { KunHomeNavigationItems } from './NavigationItems'
 import type { HomeCarouselMetadata } from './mdx'
@@ -63,10 +63,10 @@ export const KunCarousel = ({ posts }: KunCarouselProps) => {
   return (
     <div
       className="relative h-[300px] overflow-hidden group touch-pan-y flex items-end"
-      // onMouseEnter={() => setIsHovered(true)}
-      // onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      {/* <AnimatePresence initial={false} custom={direction} mode="sync">
+      <AnimatePresence initial={false} custom={direction} mode="sync">
         <motion.div
           key={currentSlide}
           custom={direction}
@@ -93,18 +93,27 @@ export const KunCarousel = ({ posts }: KunCarouselProps) => {
           }}
           className="absolute w-full h-full cursor-grab active:cursor-grabbing"
         >
+          {/* <KunDesktopCard posts={posts} currentSlide={currentSlide} />
+
+          <KunMobileCard posts={posts} currentSlide={currentSlide} /> */}
+          {/* 响应式条件渲染 */}
           <KunDesktopCard posts={posts} currentSlide={currentSlide} />
-
-          <KunMobileCard posts={posts} currentSlide={currentSlide} />
+          <div className="block sm:hidden h-full">
+              <KunMobileCard posts={posts} currentSlide={currentSlide} />
+          </div>
         </motion.div>
-      </AnimatePresence> */}
-      <div className='absolute w-full h-full cursor-grab active:cursor-grabbing'>
+      </AnimatePresence>
+      {/* <div  className="absolute w-full h-full cursor-grab active:cursor-grabbing">
+      <KunDesktopCard posts={posts} currentSlide={currentSlide} />
+      <div className="block sm:hidden h-full">
+          <KunMobileCard posts={posts} currentSlide={currentSlide} />
+      </div>
+      </div> */}
 
-                <KunDesktopCard posts={posts} currentSlide={currentSlide} />
-                </div>
+     
 
 
-      {/* <div className="z-10 w-full py-3 space-y-3 sm:hidden">
+      <div className="z-10 w-full py-3 space-y-3 sm:hidden md:hidden lg:hidden xl:hidden">
         <RandomGalgameButton
           className="shadow-md"
           color="primary"
@@ -115,7 +124,7 @@ export const KunCarousel = ({ posts }: KunCarouselProps) => {
           随机一部游戏
         </RandomGalgameButton>
 
-        <div className="grid grid-cols-3 gap-3 sm:hidden sm:gap-6">
+        <div className="grid grid-cols-3 gap-3 sm:hidden md:hidden lg:hidden xl:hidden sm:gap-6">
           <KunHomeNavigationItems buttonSize="sm" />
         </div>
       </div>
@@ -149,7 +158,7 @@ export const KunCarousel = ({ posts }: KunCarouselProps) => {
             }}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import CONFIG from '../config'
 import BlogPostCard from './BlogPostCard'
 import BlogPostListEmpty from './BlogPostListEmpty'
 import PaginationNumber from './PaginationNumber'
+import { GalgameCard } from './Card'
 
 /**
  * 文章列表分页表格
