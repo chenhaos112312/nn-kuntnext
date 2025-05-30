@@ -10,6 +10,9 @@ const Style = () => {
       body {
         background-color: #f7f9fe;
       }
+      .dark body {
+        background-color: #000000;
+      }
 
       // 公告栏中的字体固定白色
       #theme-heo #announcement-content .notion {
