@@ -19,7 +19,7 @@ const SocialButton = () => {
   return (
     <div className='w-full justify-center flex-wrap flex'>
       <div className='space-x-12 text-3xl text-gray-600 dark:text-gray-300 '>
-        {CONTACT_GITHUB && (
+        {/* {CONTACT_GITHUB && (
           <a
             target='_blank'
             rel='noreferrer'
@@ -108,7 +108,7 @@ const SocialButton = () => {
             href={CONTACT_YOUTUBE}>
             <i className='transform hover:scale-125 duration-150 fab fa-youtube dark:hover:text-indigo-400 hover:text-indigo-600' />
           </a>
-        )}
+        )} */}
       </div>
     </div>
   )

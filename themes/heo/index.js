@@ -126,7 +126,7 @@ const LayoutBase = props => {
       </main>
 
       {/* 页脚 */}
-      {/* <Footer /> */}
+      <Footer />
 
       {HEO_LOADING_COVER && <LoadingCover />}
     </div>
@@ -143,7 +143,7 @@ const LayoutIndex = props => {
   return (
     <div id='post-outer-wrapper' className='px-5 md:px-0'>
       {/* 文章分类条 */}
-      {/* <CategoryBar {...props} /> */}
+      <CategoryBar {...props} />
       {siteConfig('POST_LIST_STYLE') === 'page' ? (
         <BlogPostListPage {...props} />
       ) : (
