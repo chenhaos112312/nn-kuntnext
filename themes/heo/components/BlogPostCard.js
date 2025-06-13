@@ -122,7 +122,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
           isPressable
           as={Link}
           href={post?.href}
-          className="w-full border border-default-100 dark:border-default-200"
+          className="w-full border border-default-100 dark:border-default-200 group  hover:border-indigo-600  dark:hover:border-white duration-300 transition-colors hover:shadow-[0_0_10px_white]"
         >
           <CardHeader className="p-0">
             <div className="relative w-full mx-auto overflow-hidden text-center rounded-t-lg opacity-90">
@@ -138,7 +138,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                 radius="none"
                 alt={post?.title}
                 className={cn(
-                  'size-full object-cover transition-all duration-300',
+                  'size-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-500 ease-in-out',
                   imageLoaded ? 'scale-100 opacity-90' : 'scale-105 opacity-0'
                 )}
                 removeWrapper={true}
