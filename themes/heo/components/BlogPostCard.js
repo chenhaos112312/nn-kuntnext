@@ -10,6 +10,8 @@ import { Image } from '@nextui-org/image'
 import { KunCardStats } from './CardStats'
 import { KunPatchAttribute } from './PatchAttribute'
 import { cn } from './cn'
+import { Chip } from '@nextui-org/chip'
+import { formatDistanceToNow } from './formatDistanceToNow'
 import { useState } from 'react'
 
 const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
@@ -34,6 +36,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
     CONFIG
   )
     const [imageLoaded, setImageLoaded] = useState(false)
+    console.log(post,"-------post--------")
 
   return (
     // <article
@@ -156,10 +159,20 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
             <h2 className="font-semibold transition-colors text-small sm:text-lg line-clamp-2 hover:text-primary-500">
               {post.title}
             </h2>
+            {/* <span className='text-sm'>{post.date?formatDistanceToNow(post.date.start_date):formatDistanceToNow(post.date)}</span> */}
+
             {/* <KunCardStats patch={patch} isMobile={true} /> */}
+             <Chip variant="flat" size="sm"> 
+                 {post.date?formatDistanceToNow(post.date.start_date):formatDistanceToNow(post.date)}
+            </Chip>
           </CardBody>
           <CardFooter className="pt-0">
             <KunPatchAttribute types={post.tagItems} size="sm" />
+             {/* <Chip variant="flat" size="sm"> */}
+                 {/* {formatDistanceToNow(post.date)} */}
+                 {/* {post.date?formatDistanceToNow(post.date.start_date):formatDistanceToNow(post.date)} */}
+                {/* {post.date?(post.date.start_date):(post.date)} */}
+            {/* </Chip> */}
           </CardFooter>
         </Card>
   )

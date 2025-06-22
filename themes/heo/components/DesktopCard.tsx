@@ -3,6 +3,7 @@
 import { Card, Chip, Link } from '@nextui-org/react'
 import { docDirectoryLabelMap } from './doc'
 // import { formatDistanceToNow } from '~/utils/formatDistanceToNow'
+ import { formatDistanceToNow } from './formatDistanceToNow'
 import type { HomeCarouselMetadata } from './mdx.ts'
 
 interface Props {
@@ -52,8 +53,8 @@ export const KunDesktopCard = ({ posts, currentSlide }: Props) => {
             </Chip>
 
             <Chip variant="flat" size="sm">
-              {/* {formatDistanceToNow(post.date)} */}
-              4月前
+              {formatDistanceToNow(post.date)}
+              {/* 4月前 */}
             </Chip>
           </div>
         </div>

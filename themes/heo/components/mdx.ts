@@ -65,7 +65,7 @@ export const getKunPosts = (): HomeCarouselMetadata[] => {
           authorAvatar: 'https://img.notionusercontent.com/s3/prod-files-secure%2F6d522dab-b545-4b8d-b1c8-d5dc822a2f02%2F29db38d2-d5fa-4fa6-8a92-3b527cfe80d1%2Ffavicon.svg/size/?exp=1748257352&sig=u-PLXZ5twdImj8ga2ZLQ_weQ4a5-kGuQnmJFeoJvH8U&id=1fb36ba3-3dc4-81a6-ac77-000b07df8966&table=collection&userId=233c0707-4f1a-440b-9819-e87e246bdeef',
           pin: true,
           directory: 'notice',
-          link: `/doc/aa`
+          link: `/aa`
         })
 
          posts.push({
@@ -77,7 +77,7 @@ export const getKunPosts = (): HomeCarouselMetadata[] => {
           authorAvatar: 'https://img.notionusercontent.com/s3/prod-files-secure%2F6d522dab-b545-4b8d-b1c8-d5dc822a2f02%2F29db38d2-d5fa-4fa6-8a92-3b527cfe80d1%2Ffavicon.svg/size/?exp=1748257352&sig=u-PLXZ5twdImj8ga2ZLQ_weQ4a5-kGuQnmJFeoJvH8U&id=1fb36ba3-3dc4-81a6-ac77-000b07df8966&table=collection&userId=233c0707-4f1a-440b-9819-e87e246bdeef',
           pin: true,
           directory: 'notice',
-          link: `/doc/bb`
+          link: `/bb`
         })
   }
 
